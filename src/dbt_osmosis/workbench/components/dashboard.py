@@ -57,7 +57,7 @@ class Dashboard:
             board.register(dashboard.Item(self._key, x, y, w, h, **item_props))  # pyright: ignore[reportUnknownMemberType,reportArgumentType]
 
         def _switch_theme(self):
-            self._dark_mode = not self._dark_mode
+            state.app.theme = "light" if state.app.theme == "dark" else "dark"
 
         @contextmanager
         def title_bar(self, padding: str = "5px 15px 5px 15px", dark_switcher: bool = True):
