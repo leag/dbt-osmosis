@@ -439,13 +439,3 @@ class AIAssistant(Dashboard.Item):
             return "#ff9800"  # Orange
         else:
             return "#f44336"  # Red
-
-    @property
-    def _dark_mode(self) -> bool:
-        """Check if dark mode is enabled.
-
-        Returns:
-            True if dark mode is enabled, False otherwise
-        """
-        # This would be integrated with the main app theme
-        return False
