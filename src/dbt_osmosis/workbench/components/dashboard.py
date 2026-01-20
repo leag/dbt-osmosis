@@ -9,6 +9,7 @@ from uuid import uuid4
 
 from streamlit import session_state as state
 from streamlit_elements_fluence import dashboard, mui  # pyright: ignore[reportMissingTypeStubs]
+import streamlit as st
 
 
 class ImplementsBool(t.Protocol):
@@ -58,6 +59,7 @@ class Dashboard:
 
         def _switch_theme(self):
             state.app.theme = "light" if state.app.theme == "dark" else "dark"
+            st.rerun()
 
         @contextmanager
         def title_bar(self, padding: str = "5px 15px 5px 15px", dark_switcher: bool = True):
